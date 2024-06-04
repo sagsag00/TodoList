@@ -1,0 +1,71 @@
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="navigation_open">SlidingMenu</string>
+    <string name="navigation_close">SlidingMenu</string>
+
+    <string-array name="titles">
+        <item>Home</item>
+        <item>Upcoming</item>
+        <item>Help</item>
+    </string-array>
+
+    <array name="icons">
+        <item>@drawable/home_black</item>
+        <item>@drawable/fastforward_black</item>
+        <item>@drawable/ic_launcher_foreground</item>
+    </array>
+
+    <string-array name="importance_levels">
+        <item>Not Important</item>
+        <item>Not very important</item>
+        <item>Important</item>
+        <item>Very Important</item>
+        <item>Cannot miss</item>
+    </string-array>
+
+    <string-array name="important_color">
+        <item>#4CAF50</item>
+        <item>#80BB3B</item>
+        <item>#E84D05</item>
+        <item>#D20222</item>
+        <item>#A80000</item>
+    </string-array>
+
+    <string-array name="notification_date_color">
+        <item>#29942D</item>
+        <item>#FFC107</item>
+        <item>#E82727</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>This button lets you to navigate between pages of the app.</item>
+        <item>This button lets you create projects.</item>
+        <item>Here you type the name of the project.</item>
+        <item>Here you type the tasks you need to do.</item>
+        <item>Long click on a task to delete it.</item>
+        <item>Click on the plus to add more tasks.</item>
+        <item>The importance of the project.</item>
+        <item>How much time before the due date, if it exists, you want the notification to start. Alternatively, if there isnt a due date, what is the interval of each notification.</item>
+        <item>If you have a due date for the project, this should be ticked, otherwise untick it.</item>
+        <item>When you click on "Done", the project will create and you will get notifications according to your preferences.</item>
+        <item>If you want to edit the project, you can click on it again.</item>
+        <item>Click on any task twice to inline it.</item>
+    </string-array>
+
+    <string-array name="descriptions_corresponding_ids">
+        <item>parent</item>
+        <item>newProjectButton</item>
+        <item>addProjectTitle</item>
+        <item>newTask1</item>
+        <item>newTask1</item>
+        <item>newTask1</item>
+        <item>selectImportance</item>
+        <item>setTimeBefore</item>
+        <item>dueDateToggle</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+    </string-array>
+
+
+</resources>

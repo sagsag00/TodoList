@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--remember that it does the same if you set the height to wrap-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayoutProjectPop"
+    xmlns="http://www.w3.org/2000/svg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFFFFFF"
+    android:theme="@style/Theme.SchoolProject.MaterialComponents"
+    android:fillViewport="true"
+    tools:context=".projectpop.ProjectManagePop">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/PopConstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <EditText
+            android:textCursorDrawable="@null"
+            android:id="@+id/addProjectTitle"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="32dp"
+            android:background="@null"
+            android:backgroundTint="@android:color/transparent"
+            android:ems="10"
+            android:hint="Add Project Title"
+            android:inputType="text"
+            android:maxLength="20"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            android:enabled="false"
+            />
+
+        <View
+            android:id="@+id/stopLine1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_color"
+            app:layout_constraintTop_toBottomOf="@+id/addProjectTitle"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            android:enabled="false"
+            />
+
+        <EditText
+            android:tag="left"
+            android:textCursorDrawable="@null"
+            android:id="@+id/newTask1"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="87dp"
+            android:background="@null"
+            android:backgroundTint="@android:color/transparent"
+            android:ems="10"
+            android:hint="New Task"
+            android:inputType="text"
+            android:maxLength="20"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:drawableStart="@drawable/circle_importance_color"
+            android:drawablePadding="10dp"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintEnd_toStartOf="@id/newTask2"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck"
+            />
+
+        <EditText
+            android:tag="right"
+            android:textCursorDrawable="@null"
+            android:id="@+id/newTask2"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="245dp"
+            android:layout_marginTop="87dp"
+            android:background="@null"
+            android:backgroundTint="@android:color/transparent"
+            android:ems="10"
+            android:hint="New Task"
+            android:inputType="text"
+            android:maxLength="20"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:drawableStart="@drawable/circle_importance_color"
+            android:drawablePadding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"
+            tools:ignore="TouchTargetSizeCheck"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_begin="16dp"
+            app:layout_constraintStart_toEndOf="@id/newTask2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/addProjectTitle"
+            android:enabled="false"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.45"
+            app:layout_constraintTop_toTopOf="parent"
+            android:enabled="false"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createMoreTasks"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="142dp"
+            android:background="@drawable/plus_black_tiny"
+            android:tag="newProjectButton"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            app:cornerRadius="0dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideline3"
+            android:enabled="false"
+            />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constLayoutForGoDown1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/createMoreTasks"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <View
+                android:id="@+id/stopLine2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_color"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="-15dp"
+                android:enabled="false"
+                />
+
+            <View
+                android:id="@+id/stopLine3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/grey_color"
+                app:layout_constraintTop_toBottomOf="@+id/selectImportance"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="-15dp"
+                android:enabled="false"
+                />
+
+            <View
+                android:id="@+id/stopLine4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/grey_color"
+                app:layout_constraintTop_toBottomOf="@+id/setTimeOfReminder"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                android:enabled="false"
+                />
+
+            <View
+                android:id="@+id/stopLine5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="236dp"
+                android:background="@color/grey_color"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/selectImportance"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                android:enabled="false"
+                />
+
+            <View
+                android:id="@+id/stopLine6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="291dp"
+                android:background="@color/grey_color"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/selectImportance"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                android:enabled="false"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.04"
+                app:layout_constraintStart_toStartOf="@id/selectImportance"
+                android:enabled="false"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dueDateToggle"
+                android:enabled="false"
+                />
+
+            <TextView
+                android:id="@+id/selectImportance"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Select Importance"
+                android:textColorHint="@color/black"
+                android:textSize="19dp"
+                android:drawableStart="@drawable/circle_importance_color"
+                android:drawableTint="@color/red"
+                android:drawablePadding="10dp"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintEnd_toEndOf="@id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/stopLine2"
+                tools:ignore="MissingConstraints"
+                android:enabled="false"
+                />
+
+            <EditText
+                android:id="@+id/setDueDateButton"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="12dp"
+                android:background="@null"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableLeft="@drawable/clock"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left|center"
+                android:hint="Set Date"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="19dp"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintEnd_toStartOf="@id/dueDateToggle"
+                app:layout_constraintTop_toBottomOf="@id/stopLine3"
+                android:enabled="false"
+                />
+
+            <EditText
+                android:id="@+id/setTimeOfReminder"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="64dp"
+                android:background="@null"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical|right"
+                android:hint="Time -> ring"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="19dp"
+                android:paddingLeft="6dp"
+                app:layout_constraintStart_toEndOf="@id/setTimeBefore"
+                app:layout_constraintEnd_toEndOf="@id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/stopLine3"
+                tools:ignore="MissingConstraints"
+                android:enabled="false"
+                />
+
+            <EditText
+                android:id="@+id/setTimeBefore"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="64dp"
+                android:background="@null"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableLeft="@drawable/notifications"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Time Before"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="19dp"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintTop_toBottomOf="@id/stopLine3"
+                tools:ignore="MissingConstraints"
+                android:enabled="false"
+                />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/dueDateToggle"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="12dp"
+                android:buttonTint="#604ba1"
+                android:checked="true"
+                android:text="Due date"
+                android:textColor="@color/black"
+                android:textSize="19dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/setTimeBefore"
+                app:layout_constraintEnd_toEndOf="@id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/stopLine3"
+                android:enabled="false"
+                />
+
+            <EditText
+                android:id="@+id/setHowMuchToRemind"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="12dp"
+                android:background="@null"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableLeft="@drawable/notifications"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="How much reminders"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="19dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@id/dueDateToggle"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/stopLine3"
+                tools:ignore="MissingConstraints"
+                android:enabled="false"
+                />
+
+            <RadioGroup
+                android:id="@+id/radioGroupOptionsForMoreThan1PerDay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="76dp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/selectImportance"
+                android:enabled="false"
+                >
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/optionAutomaticBetweenSetHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#604ba1"
+                    android:checked="true"
+                    android:text="Automatically between"
+                    android:textColor="@color/black"
+                    android:textSize="19dp"
+                    android:enabled="false"
+                    />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/optionSetEachAlarmManually"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#604ba1"
+                    android:text="Set time of each"
+                    android:textColor="@color/black"
+                    android:textSize="19dp"
+                    android:enabled="false"
+                    />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRow1CustomTimes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideline5"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupOptionsForMoreThan1PerDay"
+                app:layout_constraintVertical_bias="0.13999999"
+                android:gravity="center"
+                >
+
+                <EditText
+                    android:id="@+id/customTime1"
+                    android:layout_width="100dp"
+                    android:layout_height="43dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:hint="Time -> ring"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="19dp"
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </View>
+
+                <EditText
+                    android:id="@+id/customTime2"
+                    android:layout_width="100dp"
+                    android:layout_height="43dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:hint="Time -> ring"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="19dp"
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </View>
+
+
+                <EditText
+                    android:id="@+id/customTime3"
+                    android:layout_width="100dp"
+                    android:layout_height="43dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:hint="Time -> ring"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="19dp"
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRow2CustomTimes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideline5"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintTop_toBottomOf="@id/linearLayoutRow1CustomTimes"
+                app:layout_constraintVertical_bias="0.13999999"
+                android:gravity="center"
+                >
+
+                <EditText
+                    android:id="@+id/customTime4"
+                    android:layout_width="100dp"
+                    android:layout_height="43dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:hint="Time -> ring"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="19dp"
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </View>
+
+                <EditText
+                    android:id="@+id/customTime5"
+                    android:layout_width="100dp"
+                    android:layout_height="43dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:hint="Time -> ring"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="19dp"
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </View>
+
+
+                <EditText
+                    android:id="@+id/customTime6"
+                    android:layout_width="100dp"
+                    android:layout_height="43dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:hint="Time -> ring"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="19dp"
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/fromThisTime"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="181dp"
+                android:background="@null"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical|right"
+                android:hint="Time -> ring"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="19dp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintEnd_toStartOf="@id/fromThisTimeTotoThisTimeLinker"
+                app:layout_constraintTop_toBottomOf="@+id/selectImportance"
+                tools:ignore="MissingConstraints"
+                android:enabled="false"
+                />
+
+            <EditText
+                android:id="@+id/toThisTime"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="44dp"
+                android:layout_marginTop="181dp"
+                android:background="@null"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical|left"
+                android:hint="Time -> ring"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="19dp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@id/fromThisTimeTotoThisTimeLinker"
+                app:layout_constraintEnd_toStartOf="@id/guideline5"
+                app:layout_constraintTop_toBottomOf="@id/selectImportance"
+                tools:ignore="MissingConstraints"
+                android:enabled="false"
+                />
+
+            <TextView
+                android:id="@+id/fromThisTimeTotoThisTimeLinker"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="181dp"
+                android:gravity="center"
+                android:text="to"
+                android:textColor="@color/black"
+                android:background="@null"
+                android:textSize="19dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@+id/toThisTime"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/fromThisTime"
+                app:layout_constraintTop_toBottomOf="@+id/selectImportance"
+                android:enabled="false"
+                />
+
+            <ca.antonious.materialdaypicker.MaterialDayPicker
+                android:id="@+id/dayPickerForWeek"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginEnd="-50dp"
+                android:layout_marginTop="79dp"
+                android:saveEnabled="true"
+                android:scaleX="0.75"
+                android:scaleY="0.75"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@+id/setTimeOfReminder"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectImportance"
+                android:enabled="false"
+                />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLayoutForGoDown2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/stopLine4">
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.894"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:enabled="false"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/trashCan"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline9"
+            android:layout_marginTop="-40dp"
+            android:visibility="invisible"
+            android:scaleX="2"
+            android:scaleY="2"
+            app:srcCompat="@drawable/trash_can_full"
+            android:elevation="9dp"
+            android:enabled="false"
+            />
+
+        <TextView
+            android:id="@+id/projectPopDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Done"
+            android:textColor="#604ba1"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/projectPopEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Edit"
+            android:textColor="#604ba1"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/projectPopDone" />
+
+        <TextView
+            android:id="@+id/projectPopCancelEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="invisible"
+            android:text="Cancel"
+            android:textColor="#604ba1"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/projectPopDone" />
+
+        <TextView
+            android:id="@+id/projectPopDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Delete"
+            android:textColor="#604ba1"
+            android:textSize="18dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

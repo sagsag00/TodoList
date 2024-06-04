@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_dialog_bg"
+    android:theme="@style/Theme.SchoolProject.MaterialComponents"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="402dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:text="Time Before"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+        <EditText
+            android:textCursorDrawable="@null"
+            android:id="@+id/inputXBefore"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/heading"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border"
+            android:textSize="18dp"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:inputType="numberDecimal"
+            android:buttonTint="#604ba1"
+            />
+
+        <RadioGroup
+            android:id="@+id/chooseTimeBefore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputXBefore"
+            android:layout_marginTop="12dp"
+            android:background="@null">
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/chooseMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minutes"
+                android:textSize="18dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:buttonTint="#604ba1"
+                />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/chooseHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hours"
+                android:textSize="18dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:buttonTint="#604ba1"
+                />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/chooseDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Days"
+                android:textSize="18dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:buttonTint="#604ba1"
+                />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/chooseWeeks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weeks before"
+                android:textSize="18dp"
+                android:paddingLeft="10dp"
+                android:checked="true"
+                android:textColor="@color/black"
+                android:buttonTint="#604ba1"
+                />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/actionDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="18dp"
+            android:text="Done"
+            android:textColor="#604ba1"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

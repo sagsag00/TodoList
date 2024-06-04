@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_dialog_bg"
+    android:theme="@style/Theme.SchoolProject.MaterialComponents"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="402dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:text="Choose how ofter you want to be reminded"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/inputWhenRemind"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/heading"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border"
+            android:buttonTint="#604ba1"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textCursorDrawable="@null"
+            android:textSize="18dp" />
+
+        <RadioGroup
+            android:id="@+id/chooseWhenRemind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputWhenRemind"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="19dp"
+            android:background="@null">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/chooseDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#604ba1"
+                android:paddingLeft="10dp"
+                android:text="Day"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/chooseWeeks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#604ba1"
+                android:checked="true"
+                android:paddingLeft="10dp"
+                android:text="Week"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+
+                />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/chooseMonths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#604ba1"
+                android:paddingLeft="10dp"
+                android:text="Month"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/actionDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="18dp"
+            android:text="Done"
+            android:textColor="#604ba1"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

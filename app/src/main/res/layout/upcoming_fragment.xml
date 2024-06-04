@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.SchoolProject"
+    android:id="@+id/MainLayout">
+
+
+
+    <TextView
+        android:id="@+id/projectTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="67dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="My Projects"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@+id/projectTitle"
+        android:layout_marginTop="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeFragmentConstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="600dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/newProjectButton"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/plus_black"
+                android:tag="newProjectButtonL"
+                android:textAllCaps="false"
+                app:backgroundTint="@null"
+                app:cornerRadius="0dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/newProjectButton2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/newProjectButton2"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/plus_black"
+                android:tag="newProjectButton2"
+                android:visibility="invisible"
+                android:textAllCaps="false"
+                app:backgroundTint="@null"
+                app:cornerRadius="0dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/newProjectButton"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</RelativeLayout>
