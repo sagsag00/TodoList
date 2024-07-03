@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: ca.antonious:materialdaypicker:0.7.4@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9842dfe13f3db6a7f607911c3daab9bb/transformed/materialdaypicker-0.7.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9842dfe13f3db6a7f607911c3daab9bb/transformed/materialdaypicker-0.7.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9842dfe13f3db6a7f607911c3daab9bb/transformed/materialdaypicker-0.7.4/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ca.antonious/materialdaypicker/0.7.4/7785b49f7874391edaee41f89dd4e639ac266cfe/materialdaypicker-0.7.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ca.antonious/materialdaypicker/0.7.4/4b1c42f8ae88a050a150d971962a4f81a91592fe/materialdaypicker-0.7.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
